@@ -1,129 +1,18 @@
 <?php 
-set_time_limit(0);
-  error_reporting(0);
-  date_default_timezone_set('Asia/Jakarta');
 
-
-/* START COLOR */
-$res="\033[0m";
-$hitam="\033[0;30m";
-$abu2="\033[1;30m";
-$putih="\033[0;37m";
-$putih2="\033[1;37m";
-$red="\033[0;31m";
-$red2="\033[1;31m";
-$green="\033[0;32m";
-$green2="\033[1;32m";
-$yellow="\033[0;33m";
-$yellow2="\033[1;33m";
-$blue="\033[0;34m";
-$blue2="\033[1;34m";
-$purple="\033[0;35m";
-$purple2="\033[1;35m";
-$lblue="\033[0;36m";
-$lblue2="\033[1;36m";
-/* END COLOR */
-
-$false = "{$abu2}[{$red}x{$abu2}]{$red2}";
-$true = "{$abu2}[{$green}+{$abu2}]{$green2}";
-$pentung = "{$abu2}[{$yellow}!{$abu2}]{$yellow2}";
-$titik = "{$abu2}[{$res}•{$abu2}]{$green2}";
-
-
-$banner = "
-{$putih}[=]{$green2}============={$putih}[ {$red} I  n  d  o  n  e  s  i  a  {$abu2}{$putih}  M  e  r  d  e  k  a {$red} ]{$green2}======================{$putih}[=]
-\r{$red}                      
-       HHHHH                                   HHHH     H        {$putih}1     3     3      7{$red}                                     
-       H        HHH     HHHH    HHH   H HHHH  H    H   H       HHHH    H    HHHH   HHHH  
-       HHHHH   H   H   H       H   H  HH   H   HHHHH  H HHH   H____H  HHHH   __H  H      
-{$putih}           H   H   H   H       H   H  H    H       H  H    H  H        H    H  H  H      
-       HHHHH    HHH    H        HHH   H    H   HHHHH   HHHH    HHHH    HHH  HHHH  H      
-
-{$putih}[=]{$green2}============={$putih}[ {$red} I  n  d  o  n  e  s  i  a  {$abu2}{$putih}  M  e  r  d  e  k  a {$red} ]{$green2}======================{$putih}[=]
-{$putih}\n";
-
-echo $banner;
-
-function visitor($green2, $putih, $red){
- 
- function parsing($respon){
-                        $one = explode('<span class="red_bold">', $respon);
-                        $two = explode('</span>', $one[2]);
-  return $two[0];
- };
-          function mengambil($url, $header){
-                        $ch = curl_init();
-                              curl_setopt($ch, CURLOPT_URL, $url);
-                              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                              curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-              $result = curl_exec($ch);
-                        curl_close($ch);
-  return $result;
-}
-   
-
-
-   
-  $fn = file_get_contents('xxx.txt');
-
-        for ($i=0; $i <= 2000; $i++) { 
-        $ex = explode("\n", $fn);
-        $one = $ex[$i];
-          if ( $one == null ) break;
-
-
-         
-    $exp = array($one);
-   foreach ($exp as $domain) {
-
-                          $url = "https://www.statshow.com/www/.'$domain'";
-                          $res = mengambil($url, array());
-                          $suc = (parsing($res));
-  echo "{$green2}  Domain {$putih}$domain \n  {$red}Visitor {$putih}$suc\n";
+                              ################################################
+                             ##################################################
+                             ## Banner Antixnya OK author Kemet_ID thx buat  #
+                             ## Repky,  NIko, RISMAR, Boy,  Dzakir, Muhammad #
+                             ## Fauzi, Gilang,all member ATIX,SORONG6ETAR    #
+                             ##   [ Gunakan Dengan Bijak Ya Bosku ]          #
+                             ##################################################
+                              ################################################
 
 
 
-        }
- 
-}
-
-};
- 
 
 
-                          $to = readline("  [x] Welcome To Visitor Checker [ Enter ]: ");
-                          $key = strtolower($to);  
-
-if ($key == "n" ) {
-          echo "{$green2} [=] Okky Bye Bye,Good Job\n{$putih}";die;
-}
-
-                    $string = readline("    Your File: ");
-                    $baris = fopen($string, "r");
-                    $membuka = fopen('xxx.txt', 'w');
-
-      while (true) {
-               $line = fgets($baris);
-        if($line == null )break;
-                $str_arr =  explode ("/", $line);
-                $line = "$str_arr[2]";
-
-  echo "{$green2}".$line."{$putih}\n";;
-  fwrite($membuka, $line."\n");
-
-}
-
-  fclose($line);
-
-              $to2 = readline(" [x] Apakah Anda Ingin Melanjutkannya? Y/N: ");
-              $key2 = strtolower($to2);  
-
-    if ($key2 == "n") {
-            echo "{$green2} [=] Okky Bye Bye,Good Job\n{$putih}";die;
-    }
-
-    visitor($green2, $putih, $red);
-
-
+$binary = "ICBzZXRfdGltZV9saW1pdCgwKTsNCiAgZXJyb3JfcmVwb3J0aW5nKDApOw0KICBkYXRlX2RlZmF1bHRfdGltZXpvbmVfc2V0KCdBc2lhL0pha2FydGEnKTsNCg0KDQovKiBTVEFSVCBDT0xPUiAqLw0KJHJlcz0iXDAzM1swbSI7DQokaGl0YW09IlwwMzNbMDszMG0iOw0KJGFidTI9IlwwMzNbMTszMG0iOw0KJHB1dGloPSJcMDMzWzA7MzdtIjsNCiRwdXRpaDI9IlwwMzNbMTszN20iOw0KJHJlZD0iXDAzM1swOzMxbSI7DQokcmVkMj0iXDAzM1sxOzMxbSI7DQokZ3JlZW49IlwwMzNbMDszMm0iOw0KJGdyZWVuMj0iXDAzM1sxOzMybSI7DQokeWVsbG93PSJcMDMzWzA7MzNtIjsNCiR5ZWxsb3cyPSJcMDMzWzE7MzNtIjsNCiRibHVlPSJcMDMzWzA7MzRtIjsNCiRibHVlMj0iXDAzM1sxOzM0bSI7DQokcHVycGxlPSJcMDMzWzA7MzVtIjsNCiRwdXJwbGUyPSJcMDMzWzE7MzVtIjsNCiRsYmx1ZT0iXDAzM1swOzM2bSI7DQokbGJsdWUyPSJcMDMzWzE7MzZtIjsNCi8qIEVORCBDT0xPUiAqLw0KDQokZmFsc2UgPSAieyRhYnUyfVt7JHJlZH14eyRhYnUyfV17JHJlZDJ9IjsNCiR0cnVlID0gInskYWJ1Mn1beyRncmVlbn0reyRhYnUyfV17JGdyZWVuMn0iOw0KJHBlbnR1bmcgPSAieyRhYnUyfVt7JHllbGxvd30heyRhYnUyfV17JHllbGxvdzJ9IjsNCiR0aXRpayA9ICJ7JGFidTJ9W3skcmVzfeKAonskYWJ1Mn1deyRncmVlbjJ9IjsNCg0KDQokYmFubmVyID0gIg0KeyRwdXRpaH1bPV17JGdyZWVuMn09PT09PXskcHV0aWh9WyB7JHJlZH0gSSAgbiAgZCAgbyAgbiAgZSAgcyAgaSAgYSAgeyRhYnUyfXskcHV0aWh9ICBNICBlICByICBkICBlICBrICBhIHskcmVkfSBdeyRncmVlbjJ9PT09PT09eyRwdXRpaH1bPV0NClxyeyRyZWR9ICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICDilojilojilojilojilojilZcg4paI4paI4paI4pWXICAg4paI4paI4pWX4paI4paI4paI4paI4paI4paI4paI4paI4pWX4paI4paI4pWX4paI4paI4pWXICDilojilojilZcgICAgIA0KICAgICAgICAgICAgICAgIOKWiOKWiOKVlOKVkOKVkOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKVlyAg4paI4paI4pWR4pWa4pWQ4pWQ4paI4paI4pWU4pWQ4pWQ4pWd4paI4paI4pWR4pWa4paI4paI4pWX4paI4paI4pWU4pWdICB7JHB1dGlofXx8dGhhbmtzIHRvIHskcmVkfQ0KICAgICAgICAgICAgICAgIOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVkeKWiOKWiOKVlOKWiOKWiOKVlyDilojilojilZEgICDilojilojilZEgICDilojilojilZEg4pWa4paI4paI4paI4pWU4pWdICAgeyRwdXRpaH18fG15IGZyaWVuZHMNCiB7JHB1dGlofSAgICAgICAgICAgICAgIOKWiOKWiOKVlOKVkOKVkOKWiOKWiOKVkeKWiOKWiOKVkeKVmuKWiOKWiOKVl+KWiOKWiOKVkSAgIOKWiOKWiOKVkSAgIOKWiOKWiOKVkSDilojilojilZTilojilojilZcgICB7JHB1dGlofXx8QXV0aG9yDQogICAgICAgICAgICAgICAg4paI4paI4pWRICDilojilojilZHilojilojilZEg4pWa4paI4paI4paI4paI4pWRICAg4paI4paI4pWRICAg4paI4paI4pWR4paI4paI4pWU4pWdIOKWiOKWiOKVlyAgeyRwdXRpaH18fGJ5IEtlbWV0X0lEDQogICAgICAgICAgICAgICAg4pWa4pWQ4pWdICDilZrilZDilZ3ilZrilZDilZ0gIOKVmuKVkOKVkOKVkOKVnSAgIOKVmuKVkOKVnSAgIOKVmuKVkOKVneKVmuKVkOKVnSAg4pWa4pWQ4pWdICAgIA0KICAgICAgICAgIHskcHVycGxlfVsgTElOSzogaHR0cHM6Ly9naXRodWIuY29tL2ttMzdpZC9hbnRpeC12aXNpdG9yIF0NCnskcHV0aWh9Wz1deyRncmVlbjJ9PT09PT17JHB1dGlofVsgeyRyZWR9IEkgIG4gIGQgIG8gIG4gIGUgIHMgIGkgIGEgIHskYWJ1Mn17JHB1dGlofSAgTSAgZSAgciAgZCAgZSAgayAgYSB7JHJlZH0gXXskZ3JlZW4yfT09PT09PXskcHV0aWh9Wz1dDQp7JHB1dGlofVxuIjsNCg0KZWNobyAkYmFubmVyOw0KDQpmdW5jdGlvbiB2aXNpdG9yKCRncmVlbjIsICRwdXRpaCwgJHJlZCwgJHN1YywgJHZpcywgJGRhdGEpew0KIA0KIGZ1bmN0aW9uIHBhcnNpbmcoJHJlc3Bvbil7DQogICAgICAgICAgICAgICAgICAgICAgICAkb25lID0gZXhwbG9kZSgnPHNwYW4gY2xhc3M9InJlZF9ib2xkIj4nLCAkcmVzcG9uKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICR0d28gPSBleHBsb2RlKCc8L3NwYW4+JywgJG9uZVsyXSk7DQogIHJldHVybiAkdHdvWzBdOw0KIH07DQogICAgICAgICAgZnVuY3Rpb24gbWVuZ2FtYmlsKCR1cmwsICRoZWFkZXIpew0KICAgICAgICAgICAgICAgICAgICAgICAgJGNoID0gY3VybF9pbml0KCk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfVVJMLCAkdXJsKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgdHJ1ZSk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfSFRUUEhFQURFUiwgJGhlYWRlcik7DQogICAgICAgICAgICAgICRyZXN1bHQgPSBjdXJsX2V4ZWMoJGNoKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIGN1cmxfY2xvc2UoJGNoKTsNCiAgcmV0dXJuICRyZXN1bHQ7DQp9DQogICANCg0KDQogICANCiAgJGZuID0gZmlsZV9nZXRfY29udGVudHMoJGRhdGEpOw0KDQogICAgICAgIGZvciAoJGk9MDsgJGkgPD0gMjAwMDsgJGkrKykgeyANCiAgICAgICAgJGV4ID0gZXhwbG9kZSgiXG4iLCAkZm4pOw0KICAgICAgICAkb25lID0gJGV4WyRpXTsNCiAgICAgICAgICBpZiAoICRvbmUgPT0gbnVsbCApIGJyZWFrOw0KDQoNCiAgICAgICAgIA0KICAgICRleHAgPSBhcnJheSgkb25lKTsNCiAgIGZvcmVhY2ggKCRleHAgYXMgJGRvbWFpbikgew0KDQogICAgICAgICAgICAgICAgICAgICAgICAgICR1cmwgPSAiaHR0cHM6Ly93d3cuc3RhdHNob3cuY29tL3d3dy8uJyRkb21haW4nIjsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgJHJlcyA9IG1lbmdhbWJpbCgkdXJsLCBhcnJheSgpKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgJHN1YyA9IChwYXJzaW5nKCRyZXMpKTsNCg0KICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoJHN1YyA8PSAkdmlzKXsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZWNobyAieyRyZWR9ICBEb21haW4geyRwdXRpaH0kZG9tYWluIFxuICB7JHJlZH1WaXNpdG9yIHskcHV0aWh9JHN1Y1xuIjsNCg0KICAgICAgICAgICAgICAgICAgICAgICAgICB9ZWxzZXsNCg0KDQogICAgICAgIGVjaG8gInskZ3JlZW4yfSAgRG9tYWluIHskcHV0aWh9JGRvbWFpbiBcbiAgeyRncmVlbjJ9VmlzaXRvciB7JHB1dGlofSRzdWNcbiI7DQoNCiAgICAgICAgICAgICAgICAgICAgICAgICAgfQ0KDQoNCiAgICAgICAgfQ0KIA0KfQ0KfQ0KDQogICAgJGtleWRhdDEgPSByZWFkbGluZSgiW3hdIENvbnRpbnVlIE9SIERvbid0IEV4cGxvZGUgRmlsZTpbIFkvTiBdICIpOw0KICAgICRrZXlkYXQyID0gc3RydG9sb3dlcigka2V5ZGF0MSk7ICANCiAgICBpZiAoJGtleWRhdDIgPT0gIm4iKSB7DQogICAgICAgICAgICAgICAgICAgICRzdHJpbmcgPSByZWFkbGluZSgiICAgIFt4XSBZb3VyIEZpbGU6ICIpOw0KICAgICAgICAgICAgICAgICAgICBlY2hvICJcbnskZ3JlZW4yfSAgICAgICAgICBMb2FkaW5nIFJlYWQgWW91ciBMaXN0IFNpdGV7JHB1dGlofSI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiLiI7c2xlZXAoMSk7ZWNobyAiIERvbmVcbnskcHV0aWh9IjsNCiAgICAgICAgICAgICAgICBzbGVlcCgyKTsNCiAgICAgICAgICAgICAgICAgICAgJGRhdGEgPSAiJHN0cmluZyI7DQogICAgdmlzaXRvcigkZ3JlZW4yLCAkcHV0aWgsICRyZWQsICRzdWMsICR2aXMsICRkYXRhKTtkaWU7DQoNCiAgICB9ZWxzZXsNCg0KDQoNCiAgICAgICAgICAgICAgICAgICAgJHN0cmluZyA9IHJlYWRsaW5lKCIgICAgWytdIFlvdXIgRXhwbG9kZSBGaWxlOiAiKTsNCiAgICAgICAgICAgICAgICAgICAgJGJhcmlzID0gZm9wZW4oJHN0cmluZywgInIiKTsNCiAgICAgICAgICAgICAgICAgICAgJG1lbWJ1a2EgPSBmb3BlbignX3RtcF8nLCAndycpOw0KICAgICAgICAgICAgICAgIGVjaG8gIlxueyRncmVlbjJ9ICAgICAgICAgIExvYWRpbmcgRXhwbG9kZSBZb3VyIExpc3QgU2l0ZXskcHV0aWh9IjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIuIjtzbGVlcCgxKTtlY2hvICIgRG9uZVxuXG4iOw0KICAgICAgICAgICAgICAgIHNsZWVwKDIpOw0KDQogICAgICB3aGlsZSAodHJ1ZSkgew0KICAgICAgICAgICAgICAgJGxpbmUgPSBmZ2V0cygkYmFyaXMpOw0KICAgICAgICBpZigkbGluZSA9PSBudWxsIClicmVhazsNCiAgICAgICAgICAgICAgICAkc3RyX2FyciA9ICBleHBsb2RlICgiLyIsICRsaW5lKTsNCiAgICAgICAgICAgICAgICAkbGluZSA9ICIkc3RyX2FyclsyXSI7DQoNCiAgLy8gZWNobyAieyRncmVlbjJ9Ii4kbGluZS4ieyRwdXRpaH1cbiI7DQogIGZ3cml0ZSgkbWVtYnVrYSwgJGxpbmUuIlxuIik7DQoNCn0NCg0KICBmY2xvc2UoJGxpbmUpOw0KDQogICAgICAgICAgICAgICR0bzIgPSByZWFkbGluZSgiICAgIFt4XSBjb250aW51ZSB0byBjaGVjayBzaXRlIHZpc2l0b3JzOlsgWS9OIF06ICIpOw0KICAgICAgICAgICAgICAka2V5MiA9IHN0cnRvbG93ZXIoJHRvMik7ICANCg0KICAgIGlmICgka2V5MiA9PSAibiIpIHsNCiAgICAgICAgICAgIGVjaG8gInskZ3JlZW4yfSBbPV0gT2treSBCeWUgQnllLEdvb2QgSm9iXG57JHB1dGlofSI7ZGllOw0KICAgIH0NCiAgICAkdmlzID0gcmVhZGxpbmUoIiAgICBbK10gVGFyZ2V0IFZpc2l0b3I6ICIpOw0KICAgICRkYXRhID0gIl90bXBfLnR4dCI7DQogICAgdmlzaXRvcigkZ3JlZW4yLCAkcHV0aWgsICRyZWQsICRzdWMsICR2aXMsICRkYXRhKTtkaWU7DQoNCiAgICB9DQo=";eval(base64_decode($binary));
 
  ?>
