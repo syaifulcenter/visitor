@@ -68,8 +68,8 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
           mkdir("Result");
           mkdir("Result/UP");
           mkdir("Result/DOWN");
-          $dateup = "Result/UP/UP-".date("H:i:s")."_@Antix";
-          $datedown = "Result/DOWN/DOWN-".date("H:i:s")."_@Antix";
+          $dateup = "Result/UP/UP-".date("H-i-s")."_@Antix";
+          $datedown = "Result/DOWN/DOWN-".date("H-i-s")."_@Antix";
          $up = fopen($dateup.".txt", 'w+');
          $down = fopen($datedown.".txt", 'w+');
 
@@ -109,7 +109,7 @@ if ($pass == 1) {
   mkdir("Result");
   mkdir("Result/Explode");
   $baris = fopen($string, "r");
-  $datex = "Result/Explode/".$wfile.date("-H:i:s")."_@Antix";
+  $datex = "Result/Explode/".$wfile.date("-H-i-s")."_@Antix";
          $membuka = fopen($datex.".txt", 'w+');
   echo "\n{$red2}        Loading Explode Your List{$putih}";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo " Done\n\n{$putih}";
   while (true) {
