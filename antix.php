@@ -62,19 +62,21 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
                         curl_close($ch);
   return $result;
 }
-   
 
-
-   
   $fn = file_get_contents($data);
+
+          mkdir("Result");
+          mkdir("Result/UP");
+          mkdir("Result/DOWN");
+          $dateup = "Result/UP/UP-".date("d-m-Y")."_@Antix";
+          $datedown = "Result/DOWN/DOWN-".date("d-m-Y")."_@Antix";
+         $up = fopen($dateup, 'w+');
+         $down = fopen($datedown, 'w+');
 
         for ($i=0; $i <= 2000; $i++) { 
         $ex = explode("\n", $fn);
         $one = $ex[$i];
           if ( $one == null ) break;
-
-
-         
     $exp = array($one);
    foreach ($exp as $domain) {
 
@@ -83,23 +85,19 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
                           $suc = (parsing($res));
 
                           if ($suc <= $vis){
-                             echo "{$red}         Domain {$putih}$domain \n         {$red}Visitor {$putih}$suc\n";
+         echo "{$red}         Domain {$putih}$domain \n         {$red}Visitor {$putih}$suc\n";
+                          fwrite($down, $domain."\n");
 
                           }else{
-
-
         echo "{$green2}         Domain {$putih}$domain \n         {$green2}Visitor {$putih}$suc\n";
-
+                          fwrite($up, $domain."\n");
                           }
-
-
         }
- 
 }
 }
   echo "{$green2} [ 1 ] Single Domain\n";
   echo " [ 2 ] Mass Domain List{$putih}\n";
-  $pass = readline(" [x] Single Bot or Mass Bot [ 1/2 ]: ");
+  $pass = readline(" [x] SELECT BOT [ 1/2 ]: ");sleep(1);
 
   if ($pass == 1) {
     $domain = readline("  ╚═ [-] Your Single Site: ");
@@ -117,6 +115,7 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
                               curl_setopt($ch,CURLOPT_TIMEOUT,10);
               $result = curl_exec($ch);
                         curl_close($ch);
+                        sleep(3);
   return $result;
 }
             echo "\n{$red2}        Loading Check Your Visitor Site{$putih}";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo " Done\n\n{$putih}";
@@ -129,10 +128,10 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
   }else{
 
 
-    $keydat1 = readline("  ╚═ [x] Continue OR Don't Explode File:[ Y/N ] ");
+    $keydat1 = readline("  ╚═ [x] Continue OR Don't Explode File:[ Y/N ] ");sleep(1);
     $keydat2 = strtolower($keydat1);  
     if ($keydat2 == "n") {
-                    $string = readline("      ╚═ [x] Your File: ");
+                    $string = readline("      ╚═ [x] Your File: ");sleep(1);
                     $vis = readline("         [x] Target Visitor: ");
                     echo "\n{$red2}         Loading Read Your List Site{$putih}";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo ".";sleep(1);echo " Done\n\n{$putih}";
                     sleep(2);
@@ -162,7 +161,7 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
 
   fclose($line);
 
-              $to2 = readline(" [x] continue to check site visitors:[ Y/N ]: ");
+              $to2 = readline(" [x] continue to check site visitors:[ Y/N ]: ");sleep(1);
               $key2 = strtolower($to2);  
 
     if ($key2 == "n") {
