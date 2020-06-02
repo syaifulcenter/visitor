@@ -73,7 +73,7 @@ function visitor($green2, $putih, $red, $suc, $vis, $data){
          $up = fopen($dateup.".txt", 'w+');
          $down = fopen($datedown.".txt", 'w+');
 
-        for ($i=0; $i <= 2000; $i++) { 
+        for ($i=0; $i <= 9999999; $i++) { 
         $ex = explode("\n", $fn);
         $one = $ex[$i];
           if ( $one == null ) break;
